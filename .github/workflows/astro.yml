@@ -96,6 +96,12 @@ jobs:
           npx --no-install pagefind --site dist
         working-directory: ${{ env.BUILD_PATH }}
 
+      # Paso nuevo: Crear archivo CNAME para el dominio personalizado
+      - name: Create CNAME file for custom domain
+        run: |
+          echo "biblia.discusionesbiblicas.com" > ./dist/CNAME
+        working-directory: ${{ env.BUILD_PATH }}
+
       - name: Clear Previous `tmp` and `public` Cache (if needed)
         if: env.DELETE_CACHES_GH_TOKEN != ''
         run: |
@@ -149,3 +155,4 @@ jobs:
       actions: write
     steps:
       - uses: liskin/gh-workflow-keepalive@v1
+      
