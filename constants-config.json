@@ -119,7 +119,7 @@
 	"heading-blocks": ["heading_1", "heading_2", "heading_3"],
 	"full-preview-collections": ["Stream"],
 	"hide-underscore-slugs-in-lists": true,
-	"home-page-slug": "",
+	"home-page-slug": "inicio",
 	"all-footnotes-page-slug": "_all-footnotes",
 	"og-setup": {
 		"columns": 1,
